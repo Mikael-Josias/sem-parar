@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" />
+    <title>Sem Parar</title>
+</head>
+<body>
+    <div class="header">
+        <h1 class="header__title"></h1>
+        <p class="header__subtitle"></p>
+    </div>
+    <form id="myForm" class="form">
+        <div class="form__step" data-step="1">
+            <div class="card" data-fleet-option="frota leve">
+                <div>
+                    <img src="./assets/icon-car.svg" alt="Icone de carro" />
+                    <img src="./assets/FROTALeve.svg" alt="Frota leve" />
+                </div>
+                <img src="./assets/CartãoCombustível-GoodCard.png" alt="Cartão frota leve" />
+            </div>
+            <div class="card" data-fleet-option="frota pesada">
+                <div>
+                    <img src="./assets/icon-truck.svg" alt="Icone de caminhão" />
+                    <img src="./assets/FROTAPesada.svg" alt="Frota pesada" />
+                </div>
+                <img src="./assets/CartãoCombustível-CTF.png" alt="Cartão frota pesada" />
+            </div>
+            <button class="button" data-btn-step-1>
+                AVANÇAR
+                <img src="./assets/arrow-right.svg" alt="Seta branca para direita"/>
+            </button>
+        </div>
+        <div class="form__step hidden" data-step="2">
+            <label class="step__input">
+                Nome do Representante da Empresa
+                <input id="inputName" type="text" maxlength="120" required />
+            </label>
+            <label class="step__input">
+                Cargo / Função do Representante
+                <input id="inputRole" type="text" maxlength="50" required />
+            </label>
+            <label class="step__input">
+                E-mail do Representante
+                <input id="inputEmail" type="email" maxlength="100" required />
+            </label>
+            <label class="step__input">
+                Telefone do Representante
+                <input id="inputTel" type="tel" maxlength="15" required />
+            </label>
+            <button class="button" data-btn-step-2>
+                AVANÇAR
+                <img src="./assets/arrow-right.svg" alt="Seta branca para direita"/>
+            </button>
+        </div>
+        <div class="form__step hidden" data-step="3">
+            <label class="step__input">
+                Nome da Empresa
+                <input id="inputCompany" type="text" maxlength="120" required />
+            </label>
+            <label class="step__input">
+                CNPJ da Empresa
+                <input id="inputCNPJ" type="text" maxlength="18" required />
+            </label>
+            <label class="step__input">
+                Nome do Devedor Solidário
+                <input id="inputDebtor" type="text" maxlength="120" required />
+            </label>
+            <label class="step__input">
+                CPF do Devedor Solidário
+                <input id="inputCPF" type="text" maxlength="14" required />
+            </label>
+            <button class="button" data-btn-step-3>
+                ENVIAR
+                <img src="./assets/arrow-right.svg" alt="Seta branca para direita"/>
+            </button>
+        </div>
+        <div class="form__step hidden" data-step="4">
+            <div class="step__field">
+                <label class="step__input">
+                    CEP
+                    <input id="inputCEP" type="text" maxlength="9" required />
+                </label>
+                <label class="step__input">
+                    Número
+                    <input id="inputNumber" type="text" maxlength="5" required />
+                </label>
+                <label class="step__input">
+                    Complemento
+                    <input id="inputDetails" type="text" maxlength="120" />
+                </label>
+            </div>
+            <div class="step__field">
+                <label class="step__input">
+                    Logradouro
+                    <input id="inputStreet" type="text" maxlength="50" required />
+                </label>
+                <label class="step__input">
+                    Bairro
+                    <input id="inputNeighborhood" type="text" maxlength="50" required />
+                </label>
+                <label class="step__input">
+                    Cidade
+                    <input id="inputCity" type="text" maxlength="50" required />
+                </label>
+                <label class="step__input">
+                    Estado
+                    <input id="inputState" type="text" maxlength="2" required />
+                </label>
+            </div>
+            
+            <label class="button" data-btn-step-4>
+                ENVIAR
+                <img src="./assets/arrow-right.svg" alt="Seta branca para direita"/>
+                <input type="submit" />
+            </label>
+        </div>
+    </form>
+
+    <dialog class="modal">
+        <div>
+            <img class="modal__icon" src="./assets/Feedback_sucesso_Tag.svg" alt="Check verde" />
+            <p class="modal__title">Sua solicitação foi enviada</p>
+            <p class="modal__subtitle">Em até um dia útil<br/>entraremos em contato com você.</p>
+            <p class="modal__text">Confira o seu E-mail, enviamos uma<br/>confirmação da sua solicitação de proposta.</p>
+        </div>
+    </dialog>
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+</body>
+</html>

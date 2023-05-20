@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap');
+
+:root {
+    --main-color: #7D0C12;
+    --main-font: 'Ubuntu', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font);
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 40px 60px;
+    height: 100vh;
+}
+
+.header {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.header__title {
+    font-size: 28px;
+    font-weight: 300;
+    color: var(--main-color);
+}
+
+.header__subtitle {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.form {
+    position: relative;
+    flex-grow: 1;
+    padding-bottom: 100px;
+    width: 100%;
+}
+
+.form__step {
+    display: flex;
+    gap: 60px;
+    width: 100%;
+    height: 100%;
+}
+
+.form__step:not([data-step='1']) {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 900px;
+}
+
+.form__step[data-step='4'] {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    margin: 0;
+    width: 100%;
+}
+
+.step__field {
+    display: flex;
+    justify-content: start;
+    width: 100%;
+}
+
+.step__field > label {
+    margin: 0 48px 0 0;
+}
+
+.step__field:last-of-type > label {
+    width: 200px;
+}
+
+.step__field:last-of-type > label:last-child {
+    width: 100px;
+}
+
+.form__step.hidden {
+    display: none;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 16px;
+    width: 300px;
+    height: 125px;
+    box-shadow: 0px 0px 20px -5px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+
+.card.selected {
+    background-color: beige;
+}
+
+.card > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card > div > img:first-child {
+    width: 40px;
+}
+
+.step__input {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 16px;
+    font-weight: 300;
+    width: 277px;
+    margin: 0 auto;
+}
+
+.step__input > input {
+    font-size: 16px;
+    font-weight: 300;
+    outline: none;
+    appearance: none;
+    border: none;
+    border-bottom: 2px solid black;
+    width: 100%;
+}
+
+.button {
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #7D0C12;
+    border: none;
+    border-radius: 10px;
+    padding: 20px 40px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #8b1c22;
+}
+
+.button > input[type='submit'] {
+    display: none;
+}
+
+.modal {
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+    overflow: hidden;
+}
+
+.modal > div {
+    display: flex;
+    flex-direction: column;
+    padding: 60px 40px 20px 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.modal__icon {
+    width: 60px;
+    height: 60px;
+}
+
+.modal__title {
+    font-size: 34px;
+    font-weight: 300;
+    color: var(--main-color);
+    margin-bottom: 0;
+}
+
+.modal__subtitle {
+    font-size: 24px;
+    font-weight: 500;
+    color: #2B2B2B;
+    margin-bottom: 70px;
+}
+
+.modal__text {
+    font-size: 16px;
+    font-weight: 300;
+}
